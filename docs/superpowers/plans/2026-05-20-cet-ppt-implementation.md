@@ -105,7 +105,7 @@ git -C /Users/huapingyu/dev/guizang-test commit -m "chore: scaffold CET deck and
 rg -n '<title>获取四六级真题，不要再在评论区刷 ×× 啦！</title>' \
   /Users/huapingyu/dev/guizang-test/ppt/index.html
 
-rg -c '<section class="slide' \
+rg -c '^[[:space:]]*<section class="slide' \
   /Users/huapingyu/dev/guizang-test/ppt/index.html
 ```
 
@@ -257,7 +257,7 @@ Replace `<!-- SLIDES_HERE -->` with:
 rg -n '<title>获取四六级真题，不要再在评论区刷 ×× 啦！</title>' \
   /Users/huapingyu/dev/guizang-test/ppt/index.html
 
-rg -c '<section class="slide' \
+rg -c '^[[:space:]]*<section class="slide' \
   /Users/huapingyu/dev/guizang-test/ppt/index.html
 
 rg -n '04-homepage.png|The Problem|Before · 常见路径|SLIDES_CONTINUE' \
@@ -284,7 +284,7 @@ git -C /Users/huapingyu/dev/guizang-test commit -m "feat: add CET deck opening s
 - [ ] **Step 1: Confirm only the first four slides exist before adding the back half**
 
 ```bash
-rg -c '<section class="slide' \
+rg -c '^[[:space:]]*<section class="slide' \
   /Users/huapingyu/dev/guizang-test/ppt/index.html
 
 rg -n 'SLIDES_CONTINUE' \
@@ -398,7 +398,7 @@ Replace `<!-- SLIDES_CONTINUE -->` with:
 <section class="slide hero light">
   <div class="chrome">
     <div>Resources · CET4 / CET6</div>
-    <div>08 / 08</div>
+    <div>07 / 08</div>
   </div>
   <div class="frame" style="display:grid;gap:5vh;align-content:center;min-height:80vh">
     <div class="kicker" data-anim>Direct Links</div>
@@ -434,7 +434,7 @@ Replace `<!-- SLIDES_CONTINUE -->` with:
 - [ ] **Step 3: Verify the full eight-slide deck and all image references**
 
 ```bash
-rg -c '<section class="slide' \
+rg -c '^[[:space:]]*<section class="slide' \
   /Users/huapingyu/dev/guizang-test/ppt/index.html
 
 rg -n '05-paper-list.png|05-batch-download.png|05-site-philosophy.png|06-paper-preview.png|欢迎关注我' \
